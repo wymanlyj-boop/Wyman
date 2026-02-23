@@ -29,7 +29,7 @@ header{
   margin:20px auto;
   padding:20px;
   border-radius:15px;
-  max-width:600px;
+  max-width:700px;
   backdrop-filter:blur(10px);
   animation:fadeIn 1s ease;
 }
@@ -37,7 +37,15 @@ header{
 img{
   width:100%;
   border-radius:10px;
+}
+
+button{
   margin-top:15px;
+  padding:8px 12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
 }
 
 @keyframes fadeIn{
@@ -51,7 +59,6 @@ footer{
   background:rgba(0,0,0,0.3);
 }
 </style>
-
 </head>
 
 <body>
@@ -80,10 +87,12 @@ Wyman Webpages
 <div class="card">
 <h2>Game Gallery - Minecraft Buildings</h2>
 
-<img src="WhatsApp Image 2026-02-23 at 5.54.41 PM.jpeg" alt="Minecraft Building 1">
-<img src="WhatsApp Image 2026-02-23 at 5.55.34 PM (1).jpeg" alt="Minecraft Building 2">
-<img src="WhatsApp Image 2026-02-23 at 5.55.34 PM (2).jpeg" alt="Minecraft Building 3">
-<img src="WhatsApp Image 2026-02-23 at 5.55.34 PM.jpeg" alt="Minecraft Building 4">
+<img id="galleryImage" 
+src="WhatsApp Image 2026-02-23 at 5.54.41 PM.jpeg" 
+alt="Minecraft Building">
+
+<br>
+<button onclick="nextImage()">Next Image</button>
 
 </div>
 
@@ -92,6 +101,25 @@ Wyman Webpages
 <footer>
 © 2026 Wyman | Hosted on GitHub Pages
 </footer>
+
+<script>
+const images = [
+"WhatsApp Image 2026-02-23 at 5.54.41 PM.jpeg",
+"WhatsApp Image 2026-02-23 at 5.55.34 PM (1).jpeg",
+"WhatsApp Image 2026-02-23 at 5.55.34 PM (2).jpeg",
+"WhatsApp Image 2026-02-23 at 5.55.34 PM.jpeg"
+];
+
+let current = 0;
+
+function nextImage(){
+  current++;
+  if(current >= images.length){
+    current = 0;
+  }
+  document.getElementById("galleryImage").src = images[current];
+}
+</script>
 
 </body>
 </html>
