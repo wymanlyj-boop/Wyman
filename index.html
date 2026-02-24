@@ -27,11 +27,12 @@ header{
 .card{
   background:rgba(255,255,255,0.1);
   margin:20px auto;
-  padding:20px;
+  padding:25px;
   border-radius:15px;
   max-width:700px;
   backdrop-filter:blur(10px);
   animation:fadeIn 1s ease;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
 }
 
 img{
@@ -46,6 +47,10 @@ button{
   border-radius:8px;
   cursor:pointer;
   font-weight:bold;
+}
+
+a{
+  text-decoration:none;
 }
 
 @keyframes fadeIn{
@@ -69,21 +74,31 @@ Wyman Webpages
 
 <div class="container">
 
+<!-- About Me Card -->
 <div class="card">
-<h2>Interest</h2>
-<p>I enjoy playing games like Honor of Kings, Garena Delta Force and Minecraft.</p>
+<h2>About Me</h2>
+<p>
+Hello! My name is Wyman Liew Yang Jui. I'm 16 years old, a student from the school called SMK Tarat who is passionate about technology and creativity. I enjoy learning new things, especially in science and computers.
+</p>
 </div>
 
+<!-- My Interests Card -->
 <div class="card">
-<h2>Music</h2>
-<p>I love classical music and Japanese pop songs.</p>
+<h2>My Interests</h2>
+<p>
+I have many interests, especially in gaming, music, and science. About gaming, I like to play Honor of Kings, Garena Delta Force and Minecraft. Minecraft is one of my favourite games because I can build creative structures and design my own world.
+</p>
+
+<p>
+Besides gaming, I also enjoy listening to music, especially classical music and Japanese pop songs. My favorite song is called <a href="https://youtu.be/SX_ViT4Ra7k?si=N2jvye4a9S98cTZv" target="_blank" style="color:#ffd700;">Lemon</a>, by Kenshi Yonezu. Music helps me relax and focus while studying.
+</p>
+
+<p>
+In school, I enjoy Chemistry and Mathematics because they challenge my thinking and help me understand how the world works.
+</p>
 </div>
 
-<div class="card">
-<h2>School Life</h2>
-<p>My favourite subjects are Chemistry and Maths.</p>
-</div>
-
+<!-- Minecraft Gallery Card -->
 <div class="card">
 <h2>Game Gallery - Minecraft Buildings</h2>
 
@@ -92,7 +107,7 @@ src="WhatsApp Image 2026-02-23 at 5.54.41 PM.jpeg"
 alt="Minecraft Building">
 
 <br>
-<button onclick="nextImage()">→</button>
+<button onclick="nextImage()">→ Next</button>
 
 </div>
 
@@ -123,5 +138,3 @@ function nextImage(){
 
 </body>
 </html>
-
-
